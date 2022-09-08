@@ -1,6 +1,8 @@
-import logo from '../logo.svg'
+import './NavBar.style.css'
+import logo from '../../logo.svg'
+import CartWidget from '../CartWidget/CartWidget'
 
-const NavBar = () => {
+function NavBar () {
     return (
     <div className='NavBar-container'>
         <a href='/'>
@@ -9,19 +11,19 @@ const NavBar = () => {
         <div className='NavBar-navLinks'>
             <ul>
                 <li>
-                    <a href='#'>Inicio</a>
+                    <a href='/'>Inicio</a>
                 </li>
                 <li>
-                    <a href='#'>Catálogo</a>
+                    <a href='/'>Productos</a>
                 </li>
                 <li>
-                    <a href='#'>Nosotros</a>
+                    <a href='/'>Nosotros</a>
                 </li>
             </ul>
         </div>
-        <button className='NavBar-login'>Iniciar sesión</button>
+        < CartWidget />
     </div>
     );
-};
+}
 
 export default NavBar;
