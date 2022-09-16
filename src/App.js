@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
@@ -9,10 +9,11 @@ function App() {
       <NavBar />
       <header className="App-header">
         <ItemListContainer />
-        <img src={logo} className="App-logo" alt="logo" />
+        <ItemDetailContainer />
       </header>
     </div>
   );
 }
+
 
 export default App;
