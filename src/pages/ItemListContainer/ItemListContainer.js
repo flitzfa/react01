@@ -1,22 +1,37 @@
 import { useState, useEffect } from "react";
 import ItemList from "./components/ItemList";
 import "./ItemListContainer.css";
+import { data } from "../../mockData";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [list, setList] = useState([]);
+  const { categoryName } = useParams();
+  let dataFiltrada = data.filter(
+    (product) => product.category === categoryName
+  );
+
   const getProducts = async () => {
-    fetch("https://fakestoreapi.com/products", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => setList(data));
+    categoryName
+      ? setList(dataFiltrada)
+      : setTimeout(() => {
+          setList(data);
+        }, 1000);
+
+        // console.log("cambio");
+    // await fetch("https://fakestoreapi.com/products", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => setList(data));
   };
+
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [categoryName]);
 
   return (
     <div id="itemListContainer">
