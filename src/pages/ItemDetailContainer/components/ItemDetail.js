@@ -1,7 +1,6 @@
 import ItemCount from "../../../Components/ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
   const initial = 1;
@@ -14,7 +13,6 @@ const ItemDetail = ({ product }) => {
   }
     return (
       <div className="detail-modal">
-        <Link to="/">volver</Link>
         <img className="detail-image" src={product.image} alt={product.title} />
         <h2>{product.title}</h2>
         <div>

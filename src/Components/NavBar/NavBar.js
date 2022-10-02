@@ -14,7 +14,7 @@ function NavBar() {
               <li>
               <NavLink
               to={"category/heladera"}
-              style={({ isActive }) => (isActive ? { color: "red" } : {})}
+              style={({ isActive }) => (isActive ? { color: "rgb(0, 255, 85)" } : {})}
             >
               Heladeras
             </NavLink>
@@ -22,7 +22,7 @@ function NavBar() {
               <li>
               <NavLink
               to={"category/licuadora"}
-              style={({ isActive }) => (isActive ? { color: "red" } : {})}
+              style={({ isActive }) => (isActive ? { color: "rgb(0, 255, 85)" } : {})}
             >
               Licuadoras
             </NavLink>
@@ -30,7 +30,7 @@ function NavBar() {
           <li>
             <NavLink
               to={"category/lavarropas"}
-              style={({ isActive }) => (isActive ? { color: "red" } : {})}
+              style={({ isActive }) => (isActive ? { color: "rgb(0, 255, 85)" } : {})}
             >
               Lavarropas
             </NavLink>
@@ -38,7 +38,7 @@ function NavBar() {
               <li>
               <NavLink
               to={"/contact"}
-              style={({ isActive }) => (isActive ? { color: "red" } : {})}
+              style={({ isActive }) => (isActive ? { color: "rgb(0, 255, 85)" } : {})}
             >
               Contacto
             </NavLink>
