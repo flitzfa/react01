@@ -10,25 +10,13 @@ const ItemDetailContainer = () => {
 
   const getProduct = async () => {
     const db = getFirestore();
-    const queryDoc = doc(db, "products", id);
+    const queryDoc = doc(db, "items", id);
 
     await getDoc(queryDoc).then((response) => {
       console.log(response.id);
       console.log(response.data());
       setProduct({ id: response.id, ...response.data() });
     });
-
-    // await fetch(`https://fakestoreapi.com/products/${id}`, {
-    //   method: "GET",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    // },
-    // })
-    // .then((response) => response.json())
-    // .then((product) => {
-    //   console.log(product);
-    //   setProduct(product);
-    // });
   };
 
   useEffect(() => {

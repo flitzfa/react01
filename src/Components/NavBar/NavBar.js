@@ -32,10 +32,10 @@ function NavBar() {
               to={"category/lavarropas"}
               style={({ isActive }) => (isActive ? { color: "rgb(0, 255, 85)" } : {})}
             >
-              Lavarropas
+              Lavaropas
             </NavLink>
-              </li>
-              <li>
+          </li>
+          <li>
               <NavLink
               to={"/contact"}
               style={({ isActive }) => (isActive ? { color: "rgb(0, 255, 85)" } : {})}
